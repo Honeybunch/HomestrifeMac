@@ -1,7 +1,8 @@
 #ifndef __HSOBJECT_H_
 #define __HSOBJECT_H_
 
-//this only works for windows!
+//MAC CHANGE
+//Should be able to get CWD with any OS now
 #ifdef WINDOWS
     #include <direct.h>
     #define GetCurrentWorkingDirectory _getcwd

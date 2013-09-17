@@ -69,6 +69,9 @@ int LoadTGAToTexture(HSTexture * hsTex, bool openGL3, bool useTGAPalette)
 	//open the file
 	string texFilePath = hsTex->textureFilePath;
     
+    //MAC CHANGE - Arsen
+    //Changed from fopen_s to fopen. This means no more error codes so I just decided to return -1.
+    //So long as file isn't null, then there should be no problem, but this could probably be safer.
     file = fopen(texFilePath.data(), "rb");
     
 	if(!file)
@@ -402,6 +405,10 @@ int LoadHSPToPalette(HSPalette * hsPal)
 
 	FILE * file;
 
+    //MAC CHANGE - Arsen
+    //Changed from fopen_s to fopen. This means no more error codes so I just decided to return -1.
+    //So long as file isn't null, then there should be no problem, but this could probably be safer
+    
     file = fopen(hsPal->paletteFilePath.data(), "rb");
     
 	if(!file)
