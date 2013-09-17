@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FBAE44F17E8DA9B00BED50B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBAE44E17E8DA9B00BED50B /* Cocoa.framework */; };
+		3FBAE48617E8DB3D00BED50B /* audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE46B17E8DB3D00BED50B /* audio.cpp */; };
+		3FBAE48717E8DB3D00BED50B /* fighter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE46D17E8DB3D00BED50B /* fighter.cpp */; };
+		3FBAE48817E8DB3D00BED50B /* glextused.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE47017E8DB3D00BED50B /* glextused.cpp */; };
+		3FBAE48917E8DB3D00BED50B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE47217E8DB3D00BED50B /* main.cpp */; };
+		3FBAE48A17E8DB3D00BED50B /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE47417E8DB3D00BED50B /* menu.cpp */; };
+		3FBAE48B17E8DB3D00BED50B /* menuItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE47617E8DB3D00BED50B /* menuItem.cpp */; };
+		3FBAE48C17E8DB3D00BED50B /* menuManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE47817E8DB3D00BED50B /* menuManager.cpp */; };
+		3FBAE48D17E8DB3D00BED50B /* objectManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE47A17E8DB3D00BED50B /* objectManager.cpp */; };
+		3FBAE48E17E8DB3D00BED50B /* physicsobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE47C17E8DB3D00BED50B /* physicsobject.cpp */; };
+		3FBAE48F17E8DB3D00BED50B /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE47F17E8DB3D00BED50B /* SDLMain.m */; };
+		3FBAE49017E8DB3D00BED50B /* terrainobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE48017E8DB3D00BED50B /* terrainobject.cpp */; };
+		3FBAE49117E8DB3D00BED50B /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE48217E8DB3D00BED50B /* texture.cpp */; };
+		3FBAE49217E8DB3D00BED50B /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE48417E8DB3D00BED50B /* tinyxml2.cpp */; };
+		3FBAE49417E8DB5400BED50B /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBAE49317E8DB5400BED50B /* SDL.framework */; };
+		3FBAE49617E8DB6600BED50B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBAE49517E8DB6600BED50B /* OpenGL.framework */; };
+		3FBAE49D17E8DC0300BED50B /* hslog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE49717E8DC0300BED50B /* hslog.cpp */; };
+		3FBAE49E17E8DC0300BED50B /* hsobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE49917E8DC0300BED50B /* hsobject.cpp */; };
+		3FBAE49F17E8DC0300BED50B /* HUD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE49B17E8DC0300BED50B /* HUD.cpp */; };
+		3FBAE4A917E8DE3200BED50B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAE4A117E8DE3200BED50B /* Credits.rtf */; };
+		3FBAE4AA17E8DE3200BED50B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAE4A317E8DE3200BED50B /* InfoPlist.strings */; };
+		3FBAE4AB17E8DE3200BED50B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAE4A517E8DE3200BED50B /* MainMenu.xib */; };
+		3FBAE4AC17E8DE3200BED50B /* Homestrife-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAE4A717E8DE3200BED50B /* Homestrife-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FBAE44B17E8DA9B00BED50B /* Homestrife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homestrife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FBAE44E17E8DA9B00BED50B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3FBAE45117E8DA9B00BED50B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3FBAE45217E8DA9B00BED50B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3FBAE45317E8DA9B00BED50B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3FBAE46B17E8DB3D00BED50B /* audio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audio.cpp; sourceTree = "<group>"; };
+		3FBAE46C17E8DB3D00BED50B /* audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio.h; sourceTree = "<group>"; };
+		3FBAE46D17E8DB3D00BED50B /* fighter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fighter.cpp; sourceTree = "<group>"; };
+		3FBAE46E17E8DB3D00BED50B /* fighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fighter.h; sourceTree = "<group>"; };
+		3FBAE46F17E8DB3D00BED50B /* glext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glext.h; sourceTree = "<group>"; };
+		3FBAE47017E8DB3D00BED50B /* glextused.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glextused.cpp; sourceTree = "<group>"; };
+		3FBAE47117E8DB3D00BED50B /* glextused.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glextused.h; sourceTree = "<group>"; };
+		3FBAE47217E8DB3D00BED50B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3FBAE47317E8DB3D00BED50B /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		3FBAE47417E8DB3D00BED50B /* menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu.cpp; sourceTree = "<group>"; };
+		3FBAE47517E8DB3D00BED50B /* menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu.h; sourceTree = "<group>"; };
+		3FBAE47617E8DB3D00BED50B /* menuItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menuItem.cpp; sourceTree = "<group>"; };
+		3FBAE47717E8DB3D00BED50B /* menuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuItem.h; sourceTree = "<group>"; };
+		3FBAE47817E8DB3D00BED50B /* menuManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menuManager.cpp; sourceTree = "<group>"; };
+		3FBAE47917E8DB3D00BED50B /* menuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuManager.h; sourceTree = "<group>"; };
+		3FBAE47A17E8DB3D00BED50B /* objectManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = objectManager.cpp; sourceTree = "<group>"; };
+		3FBAE47B17E8DB3D00BED50B /* objectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objectManager.h; sourceTree = "<group>"; };
+		3FBAE47C17E8DB3D00BED50B /* physicsobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = physicsobject.cpp; sourceTree = "<group>"; };
+		3FBAE47D17E8DB3D00BED50B /* physicsobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = physicsobject.h; sourceTree = "<group>"; };
+		3FBAE47E17E8DB3D00BED50B /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
+		3FBAE47F17E8DB3D00BED50B /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
+		3FBAE48017E8DB3D00BED50B /* terrainobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = terrainobject.cpp; sourceTree = "<group>"; };
+		3FBAE48117E8DB3D00BED50B /* terrainobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = terrainobject.h; sourceTree = "<group>"; };
+		3FBAE48217E8DB3D00BED50B /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		3FBAE48317E8DB3D00BED50B /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
+		3FBAE48417E8DB3D00BED50B /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
+		3FBAE48517E8DB3D00BED50B /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml2.h; sourceTree = "<group>"; };
+		3FBAE49317E8DB5400BED50B /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL.framework; sourceTree = "<group>"; };
+		3FBAE49517E8DB6600BED50B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		3FBAE49717E8DC0300BED50B /* hslog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hslog.cpp; sourceTree = "<group>"; };
+		3FBAE49817E8DC0300BED50B /* hslog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hslog.h; sourceTree = "<group>"; };
+		3FBAE49917E8DC0300BED50B /* hsobject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hsobject.cpp; sourceTree = "<group>"; };
+		3FBAE49A17E8DC0300BED50B /* hsobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hsobject.h; sourceTree = "<group>"; };
+		3FBAE49B17E8DC0300BED50B /* HUD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUD.cpp; sourceTree = "<group>"; };
+		3FBAE49C17E8DC0300BED50B /* HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
+		3FBAE4A217E8DE3200BED50B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = Credits.rtf; sourceTree = "<group>"; };
+		3FBAE4A417E8DE3200BED50B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		3FBAE4A617E8DE3200BED50B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
+		3FBAE4A717E8DE3200BED50B /* Homestrife-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Homestrife-Info.plist"; sourceTree = "<group>"; };
+		3FBAE4A817E8DE3200BED50B /* Homestrife-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Homestrife-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FBAE44817E8DA9B00BED50B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FBAE49617E8DB6600BED50B /* OpenGL.framework in Frameworks */,
+				3FBAE49417E8DB5400BED50B /* SDL.framework in Frameworks */,
+				3FBAE44F17E8DA9B00BED50B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FBAE44217E8DA9B00BED50B = {
+			isa = PBXGroup;
+			children = (
+				3FBAE49517E8DB6600BED50B /* OpenGL.framework */,
+				3FBAE49317E8DB5400BED50B /* SDL.framework */,
+				3FBAE45417E8DA9B00BED50B /* Homestrife */,
+				3FBAE44D17E8DA9B00BED50B /* Frameworks */,
+				3FBAE44C17E8DA9B00BED50B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FBAE44C17E8DA9B00BED50B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FBAE44B17E8DA9B00BED50B /* Homestrife.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FBAE44D17E8DA9B00BED50B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FBAE44E17E8DA9B00BED50B /* Cocoa.framework */,
+				3FBAE45017E8DA9B00BED50B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FBAE45017E8DA9B00BED50B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FBAE45117E8DA9B00BED50B /* AppKit.framework */,
+				3FBAE45217E8DA9B00BED50B /* CoreData.framework */,
+				3FBAE45317E8DA9B00BED50B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3FBAE45417E8DA9B00BED50B /* Homestrife */ = {
+			isa = PBXGroup;
+			children = (
+				3FBAE49717E8DC0300BED50B /* hslog.cpp */,
+				3FBAE49817E8DC0300BED50B /* hslog.h */,
+				3FBAE49917E8DC0300BED50B /* hsobject.cpp */,
+				3FBAE49A17E8DC0300BED50B /* hsobject.h */,
+				3FBAE49B17E8DC0300BED50B /* HUD.cpp */,
+				3FBAE49C17E8DC0300BED50B /* HUD.h */,
+				3FBAE46B17E8DB3D00BED50B /* audio.cpp */,
+				3FBAE46C17E8DB3D00BED50B /* audio.h */,
+				3FBAE46D17E8DB3D00BED50B /* fighter.cpp */,
+				3FBAE46E17E8DB3D00BED50B /* fighter.h */,
+				3FBAE46F17E8DB3D00BED50B /* glext.h */,
+				3FBAE47017E8DB3D00BED50B /* glextused.cpp */,
+				3FBAE47117E8DB3D00BED50B /* glextused.h */,
+				3FBAE47217E8DB3D00BED50B /* main.cpp */,
+				3FBAE47317E8DB3D00BED50B /* main.h */,
+				3FBAE47417E8DB3D00BED50B /* menu.cpp */,
+				3FBAE47517E8DB3D00BED50B /* menu.h */,
+				3FBAE47617E8DB3D00BED50B /* menuItem.cpp */,
+				3FBAE47717E8DB3D00BED50B /* menuItem.h */,
+				3FBAE47817E8DB3D00BED50B /* menuManager.cpp */,
+				3FBAE47917E8DB3D00BED50B /* menuManager.h */,
+				3FBAE47A17E8DB3D00BED50B /* objectManager.cpp */,
+				3FBAE47B17E8DB3D00BED50B /* objectManager.h */,
+				3FBAE47C17E8DB3D00BED50B /* physicsobject.cpp */,
+				3FBAE47D17E8DB3D00BED50B /* physicsobject.h */,
+				3FBAE47E17E8DB3D00BED50B /* SDLMain.h */,
+				3FBAE47F17E8DB3D00BED50B /* SDLMain.m */,
+				3FBAE48017E8DB3D00BED50B /* terrainobject.cpp */,
+				3FBAE48117E8DB3D00BED50B /* terrainobject.h */,
+				3FBAE48217E8DB3D00BED50B /* texture.cpp */,
+				3FBAE48317E8DB3D00BED50B /* texture.h */,
+				3FBAE48417E8DB3D00BED50B /* tinyxml2.cpp */,
+				3FBAE48517E8DB3D00BED50B /* tinyxml2.h */,
+				3FBAE45517E8DA9B00BED50B /* Supporting Files */,
+			);
+			path = Homestrife;
+			sourceTree = "<group>";
+		};
+		3FBAE45517E8DA9B00BED50B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FBAE4A017E8DE3200BED50B /* en.lproj */,
+				3FBAE4A717E8DE3200BED50B /* Homestrife-Info.plist */,
+				3FBAE4A817E8DE3200BED50B /* Homestrife-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FBAE4A017E8DE3200BED50B /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				3FBAE4A117E8DE3200BED50B /* Credits.rtf */,
+				3FBAE4A317E8DE3200BED50B /* InfoPlist.strings */,
+				3FBAE4A517E8DE3200BED50B /* MainMenu.xib */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FBAE44A17E8DA9B00BED50B /* Homestrife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FBAE46817E8DA9B00BED50B /* Build configuration list for PBXNativeTarget "Homestrife" */;
+			buildPhases = (
+				3FBAE44717E8DA9B00BED50B /* Sources */,
+				3FBAE44817E8DA9B00BED50B /* Frameworks */,
+				3FBAE44917E8DA9B00BED50B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Homestrife;
+			productName = Homestrife;
+			productReference = 3FBAE44B17E8DA9B00BED50B /* Homestrife.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FBAE44317E8DA9B00BED50B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = HomestrifeTeam;
+			};
+			buildConfigurationList = 3FBAE44617E8DA9B00BED50B /* Build configuration list for PBXProject "Homestrife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3FBAE44217E8DA9B00BED50B;
+			productRefGroup = 3FBAE44C17E8DA9B00BED50B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FBAE44A17E8DA9B00BED50B /* Homestrife */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FBAE44917E8DA9B00BED50B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FBAE4A917E8DE3200BED50B /* Credits.rtf in Resources */,
+				3FBAE4AA17E8DE3200BED50B /* InfoPlist.strings in Resources */,
+				3FBAE4AB17E8DE3200BED50B /* MainMenu.xib in Resources */,
+				3FBAE4AC17E8DE3200BED50B /* Homestrife-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FBAE44717E8DA9B00BED50B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FBAE48617E8DB3D00BED50B /* audio.cpp in Sources */,
+				3FBAE48717E8DB3D00BED50B /* fighter.cpp in Sources */,
+				3FBAE48817E8DB3D00BED50B /* glextused.cpp in Sources */,
+				3FBAE48917E8DB3D00BED50B /* main.cpp in Sources */,
+				3FBAE48A17E8DB3D00BED50B /* menu.cpp in Sources */,
+				3FBAE48B17E8DB3D00BED50B /* menuItem.cpp in Sources */,
+				3FBAE48C17E8DB3D00BED50B /* menuManager.cpp in Sources */,
+				3FBAE48D17E8DB3D00BED50B /* objectManager.cpp in Sources */,
+				3FBAE48E17E8DB3D00BED50B /* physicsobject.cpp in Sources */,
+				3FBAE48F17E8DB3D00BED50B /* SDLMain.m in Sources */,
+				3FBAE49017E8DB3D00BED50B /* terrainobject.cpp in Sources */,
+				3FBAE49117E8DB3D00BED50B /* texture.cpp in Sources */,
+				3FBAE49217E8DB3D00BED50B /* tinyxml2.cpp in Sources */,
+				3FBAE49D17E8DC0300BED50B /* hslog.cpp in Sources */,
+				3FBAE49E17E8DC0300BED50B /* hsobject.cpp in Sources */,
+				3FBAE49F17E8DC0300BED50B /* HUD.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FBAE4A117E8DE3200BED50B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FBAE4A217E8DE3200BED50B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3FBAE4A317E8DE3200BED50B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FBAE4A417E8DE3200BED50B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3FBAE4A517E8DE3200BED50B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FBAE4A617E8DE3200BED50B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FBAE46617E8DA9B00BED50B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3FBAE46717E8DA9B00BED50B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3FBAE46917E8DA9B00BED50B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"~/Library/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Homestrife/Homestrife-Prefix.pch";
+				INFOPLIST_FILE = "Homestrife/Homestrife-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3FBAE46A17E8DA9B00BED50B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"~/Library/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Homestrife/Homestrife-Prefix.pch";
+				INFOPLIST_FILE = "Homestrife/Homestrife-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FBAE44617E8DA9B00BED50B /* Build configuration list for PBXProject "Homestrife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FBAE46617E8DA9B00BED50B /* Debug */,
+				3FBAE46717E8DA9B00BED50B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FBAE46817E8DA9B00BED50B /* Build configuration list for PBXNativeTarget "Homestrife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FBAE46917E8DA9B00BED50B /* Debug */,
+				3FBAE46A17E8DA9B00BED50B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FBAE44317E8DA9B00BED50B /* Project object */;
+}
