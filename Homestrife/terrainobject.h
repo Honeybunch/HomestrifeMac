@@ -84,6 +84,7 @@ struct AttackResults
 	int blockstun;
 	HSVect2D force;
 	Blockability blockability;
+	bool IPSTriggered;
 };
 
 struct TerrainEventHolds
@@ -160,6 +161,7 @@ public:
 	virtual bool IsTerrain();
 	virtual bool IsTerrainObject();
 	
+	virtual bool AdvanceHold(HSObjectHold * hold);
 	virtual bool ChangeHold(HSObjectHold * hold);
 
 protected:

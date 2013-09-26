@@ -51,6 +51,11 @@ HSObjectHold::HSObjectHold()
 	spawnObjects.clear();
 	nextHold = NULL;
 	nextListHold = NULL;
+	reposition.x = 0;
+	reposition.y = 0;
+	overwriteVelocity = false;
+	velocity.x = 0;
+	velocity.y = 0;
 
 	duration = 0;
 }
@@ -111,6 +116,11 @@ HSObject::HSObject()
 	prevVel.y = 0;
 	depth = 0;
 	hsObjectEventHolds.lifetimeDeath = NULL;
+	reposition.x;
+	reposition.y;
+	overwriteVelocity = false;
+	holdVelocity.x = 0;
+	holdVelocity.y = 0;
 
 	objectsSpawned = false;
 	audioPlayed = false;
@@ -240,7 +250,7 @@ int HSObject::AdvanceHolds()
 		holdTime++;
 		if(holdTime >= curHold->duration)
 		{
-			ChangeHold(curHold->nextHold);
+			AdvanceHold(curHold->nextHold);
 		}
 	}
 
@@ -258,6 +268,17 @@ int HSObject::Update()
 	prevPos.x = pos.x;
 	prevPos.y = pos.y;
 
+	//save the current velocity
+	prevVel.x = vel.x;
+	prevVel.y = vel.y;
+
+	//reposition from the hold
+	pos.x += reposition.x;
+	pos.y += reposition.y;
+
+	reposition.x = 0;
+	reposition.y = 0;
+
 	//move according to parent, if applicable
 	if(parent != NULL && followParent)
 	{
@@ -265,12 +286,20 @@ int HSObject::Update()
 		pos.y += parent->pos.y - parent->prevPos.y;
 	}
 
+	//overwrite velocity
+	if(overwriteVelocity)
+	{
+		vel.x = holdVelocity.x;
+		vel.y = holdVelocity.y;
+	}
+
+	overwriteVelocity = false;
+	holdVelocity.x = 0;
+	holdVelocity.y = 0;
+
 	//move according to velocity
 	pos.x += vel.x;
 	pos.y += vel.y;
-
-	prevVel.x = vel.x;
-	prevVel.y = vel.y;
 
 	//handle lifetime
 	if(lifetime > 0)
@@ -285,17 +314,27 @@ int HSObject::Update()
 	return 0;
 }
 
-bool HSObject::ChangeHold(HSObjectHold* hold)
+bool HSObject::AdvanceHold(HSObjectHold* hold)
 {
+	bool result = true;
 	holdTime = 0;
 	curHold = hold;
 	if(curHold == NULL)
 	{
 		curHold = GetDefaultHold();
-		return false;
+		result = false;
 	}
 
-	return true;
+	reposition = curHold->reposition;
+	overwriteVelocity = curHold->overwriteVelocity;
+	holdVelocity = curHold->velocity;
+
+	return result;
+}
+
+bool HSObject::ChangeHold(HSObjectHold* hold)
+{
+	return AdvanceHold(hold);
 }
 
 HSObjectHold * HSObject::GetDefaultHold()

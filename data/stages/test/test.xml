@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<HSStage gravity="4" width="4000" height="4000">
+	<SpawnPoints>
+		<SpawnPoint posX="-500.0" posY="0.0" player="0"/>
+		<SpawnPoint posX="500.0" posY="0.0" player="1"/>
+		<SpawnPoint posX="-1500.0" posY="-500.0" player="2"/>
+		<SpawnPoint posX="1500.0" posY="-500.0" player="3"/>
+	</SpawnPoints>
+	<Objects>
+		<Object defFilePath="data\stages\test\platformA.xml" posX="-3000.0" posY="-500.0" depth="0"/>
+		<Object defFilePath="data\stages\test\platformA.xml" posX="-1000.0" posY="0.0" depth="0"/>
+		<Object defFilePath="data\stages\test\platformA.xml" posX="1000.0" posY="-500.0" depth="0"/>
+		<Object defFilePath="data\stages\test\backgroundTile.xml" posX="-2000.0" posY="-2000.0" depth="100"/>
+		<Object defFilePath="data\stages\test\backgroundTile.xml" posX="0.0" posY="-2000.0" depth="100"/>
+		<Object defFilePath="data\stages\test\backgroundTile.xml" posX="-2000.0" posY="0.0" depth="100"/>
+		<Object defFilePath="data\stages\test\backgroundTile.xml" posX="0.0" posY="0.0" depth="100"/>
+	</Objects>
+</HSStage>

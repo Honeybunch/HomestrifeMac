@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HSObjects version="1">
+  <HUD name="Test HUD" hudWidth="540" hudHeight="160" healthMeterOffsetX="20" healthMeterOffsetY="20" livesCounterOffsetX="400" livesCounterOffsetY="100" livesCounterDigitWidth="24" livesCounterDigitSeparation="5" hitsCounterXDistanceFromSide="100" hitsCounterYDistanceFromHUD="10" hitsCounterDigitWidth="24" hitsCounterDigitHeight="35" hitsCounterDigitSeparation="5" healthMeterFilePath="data\hud\TestHUD\Test Meter.xml" healthUnderMeterFilePath="data\hud\TestHUD\Test Under Meter.xml" livesCounterFilePath="data\hud\TestHUD\Test Counter.xml" hitsCounterFilePath="data\hud\TestHUD\Test Counter.xml">
+    <Holds>
+      <Hold name="HUD" id="1">
+        <Textures>
+          <Texture offsetY="0" offsetX="0" depth="0" textureFilePath="data\hud\TestHUD\hud\johnHud.tga"/>
+        </Textures>
+      </Hold>
+    </Holds>
+  </HUD>
+</HSObjects>

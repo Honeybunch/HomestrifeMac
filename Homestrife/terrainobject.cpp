@@ -1,6 +1,5 @@
 #include "terrainobject.h"
 #include <cmath>
-
 /////////////////////
 //TerrainObjectHold//
 /////////////////////
@@ -112,9 +111,9 @@ int TerrainObject::Update()
 	return HSObject::Update();
 }
 
-bool TerrainObject::ChangeHold(HSObjectHold* hold)
+bool TerrainObject::AdvanceHold(HSObjectHold* hold)
 {
-	if(HSObject::ChangeHold(hold))
+	if(HSObject::AdvanceHold(hold))
 	{
 		//we can be confident that this is actually a TerrainObjectHold
 		TerrainObjectHold * tHold = (TerrainObjectHold*)curHold;
@@ -144,6 +143,11 @@ bool TerrainObject::ChangeHold(HSObjectHold* hold)
 	}
 	
 	return false;
+}
+
+bool TerrainObject::ChangeHold(HSObjectHold * hold)
+{
+	return HSObject::ChangeHold(hold);
 }
 
 HSObjectHold * TerrainObject::GetDefaultHold()
@@ -201,6 +205,7 @@ void TerrainObject::ResetAttackResults()
 	attackResults.force.x = 0;
 	attackResults.force.y = 0;
 	attackResults.blockability = MID;
+	attackResults.IPSTriggered = false;
 }
 
 void TerrainObject::HandleHurtCollision(TerrainObject * attacker)

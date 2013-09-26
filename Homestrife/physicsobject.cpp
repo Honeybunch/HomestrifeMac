@@ -1,11 +1,16 @@
 #include "physicsobject.h"
 
+float gravity = 4;
+
 /////////////////////
 //PhysicsObjectHold//
 /////////////////////
 
 PhysicsObjectHold::PhysicsObjectHold() : TerrainObjectHold()
 {
+	changePhysicsAttributes = false;
+
+	ignoreGravity = false;
 }
 
 PhysicsObjectHold::~PhysicsObjectHold()
@@ -27,6 +32,7 @@ PhysicsObject::PhysicsObject() : TerrainObject()
 	curHealth = 0;
 	mass = 0;
 	falls = true;
+	ignoreGravity = false;
 	maxFallSpeed = 100;
 	ignoreJumpThroughTerrain = false;
 	takesTerrainDamage = false;
@@ -55,9 +61,9 @@ int PhysicsObject::Update()
 	if(int error = TerrainObject::Update() != 0) { return error; } //there was an error in the base update
 
 	//apply gravity
-	if(falls)
+	if(falls && !ignoreGravity)
 	{
-		vel.y += GRAVITY_ACC;
+		vel.y += gravity;
 		if(vel.y > maxFallSpeed)
 		{
 			vel.y = maxFallSpeed;
@@ -65,6 +71,37 @@ int PhysicsObject::Update()
 	}
 
 	return 0;
+}
+
+bool PhysicsObject::AdvanceHold(HSObjectHold * hold)
+{
+	if(TerrainObject::AdvanceHold(hold))
+	{
+		PhysicsObjectHold * phHold = (PhysicsObjectHold*)curHold;
+
+		if(phHold->changePhysicsAttributes)
+		{
+			ignoreGravity = phHold->ignoreGravity;
+		}
+
+		return true;
+	}
+
+	return false;
+}
+
+bool PhysicsObject::ChangeHold(HSObjectHold * hold)
+{
+	ignoreGravity = false;
+
+	return TerrainObject::ChangeHold(hold);
+}
+
+HSObjectHold * PhysicsObject::GetDefaultHold()
+{
+	ignoreGravity = false;
+
+	return TerrainObject::GetDefaultHold();
 }
 
 HSVect2D PhysicsObject::GetLeftHypotenusePoint(HSVect2D * boxPos, HSBox * box)
@@ -1013,7 +1050,7 @@ void PhysicsObject::CollisionPhysics(HSVect2D * newPos, TerrainCollisionResult *
 	//due to gravity before hitting the terrain
 	if(newPos->y != ownPos->y && ownPrevPos->y != ownPos->y)
 	{
-		newVel.y -= (abs(newPos->y - ownPos->y) / abs(ownPrevPos->y - ownPos->y)) * GRAVITY_ACC;
+		newVel.y -= (abs(newPos->y - ownPos->y) / abs(ownPrevPos->y - ownPos->y)) * gravity;
 	}
 
 	//get the largest bounce factor between the two objects
@@ -1074,7 +1111,7 @@ void PhysicsObject::CollisionPhysics(HSVect2D * newPos, TerrainCollisionResult *
 	//which it is pulling downward on the object and counteracting the upward bounce
 	if(newPos->y != ownPrevPos->y && ownPos->y != ownPrevPos->y)
 	{
-		newVel.y += (abs(newPos->y - ownPos->y) / abs(ownPrevPos->y - ownPos->y)) * GRAVITY_ACC;
+		newVel.y += (abs(newPos->y - ownPos->y) / abs(ownPrevPos->y - ownPos->y)) * gravity;
 	}
 
 	//now, get the magnitude of the velocity and if it's too small, just set it to zero

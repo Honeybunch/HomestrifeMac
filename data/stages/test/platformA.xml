@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<HSObjects version="1">
+	<TerrainObject bounce="0.0" canBeJumpedThrough="false" friction="0.05" health="0" lifetime="0" name="testPlatformA" takesTerrainDamage="false">
+		<TerrainBox depth="0" height="500.0" width="2000.0"/>
+		<EventHolds/>
+		<Holds>
+			<Hold blockability="MID" blockstun="0" changeAttackBoxAttributes="false" damage="0" duration="4" forceX="0.0" forceY="0.0" hitstun="0" horizontalDirectionBasedBlock="false" id="1" name="testPlatformA" reversedHorizontalBlock="false" trips="false">
+				<Textures>
+					<Texture depth="0" offsetX="0.0" offsetY="0.0" textureFilePath="data\stages\test\Graphics\platformA.tga"/>
+				</Textures>
+			</Hold>
+		</Holds>
+	</TerrainObject>
+</HSObjects>

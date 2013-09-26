@@ -1,8 +1,7 @@
 #ifndef __HSOBJECT_H_
 #define __HSOBJECT_H_
 
-//MAC CHANGE
-//Should be able to get CWD with any OS now
+//This should now work for all OSes
 #ifdef WINDOWS
     #include <direct.h>
     #define GetCurrentWorkingDirectory _getcwd
@@ -10,6 +9,7 @@
     #include <unistd.h>
     #define GetCurrentWorkingDirectory getcwd
 #endif
+
 
 #include <list>
 #include "texture.h"
@@ -142,6 +142,9 @@ public:
 	HSObjectHold * nextHold; //the hold to change to when this one's duration is reached
 	HSObjectHold * nextListHold; //the next hold in the list of holds
 	list<SpawnObject> spawnObjects; //objects that will be spawned on this frame
+	HSVect2D reposition; //how far the object should be repositioned upon moving to this frame
+	bool overwriteVelocity; //whetehr or not to apply the below velocity upon moving to this frame
+	HSVect2D velocity; //the velocity to overwrite the objects velocity with upon moving to this frame
 
 	unsigned int duration; //how many frames this hold lasts (based on 60fps)
 
@@ -191,6 +194,9 @@ public:
 	HSVect2D vel; //the object's velocity
 	HSVect2D prevVel; //the object's previous velocity
 	int depth; //how far into the background (positive) or forground (negative) the object should be considered. effects zoom and parallax
+	HSVect2D reposition; //a shifting of position to be applied during the update phase
+	bool overwriteVelocity; //whether or not to overwrite the current velocity with the value in the below variable
+	HSVect2D holdVelocity; //velocity to apply in the update phase, if the above boolean is true
 
 	//the holds this object moves to upon particular events
 	HSObjectEventHolds hsObjectEventHolds;
@@ -222,7 +228,8 @@ public:
 	virtual bool IsPhysicsObject();
 	virtual bool IsFighter();
 	
-	virtual bool ChangeHold(HSObjectHold * hold); //change to a new hold
+	virtual bool AdvanceHold(HSObjectHold * hold); //naturally move to a new hold, mantaining variables from the previous hold
+	virtual bool ChangeHold(HSObjectHold * hold); //force change to a new hold, resetting variables to default
 
 protected:
 	virtual HSObjectHold * GetDefaultHold(); //gets a default hold, based on current states

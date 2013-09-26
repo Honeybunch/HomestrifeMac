@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <SDL2/SDL.h>
 #include "fighter.h"
 #include "HUD.h"
 #include "menu.h"

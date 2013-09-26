@@ -4,8 +4,8 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <SDL/SDL.h>
-#include <SDL/SDL_opengl.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_opengl.h>
 #include "glext.h"
 using namespace std;
 
@@ -314,7 +314,7 @@ string loadSource(string filePath)
 	string source;
 	string line;
 
-	ifstream file(filePath);
+    std::ifstream file(filePath);
 	if(file.is_open())
 	{
 		while(file.good())

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HSObjects version="1">
+  <HSObject name="Test Meter">
+    <Holds>
+      <Hold name="meter" id="1">
+        <Textures>
+          <Texture offsetY="0" offsetX="0" depth="0" textureFilePath="data\hud\TestHUD\meter\meter.tga"/>
+        </Textures>
+      </Hold>
+    </Holds>
+  </HSObject>
+</HSObjects>

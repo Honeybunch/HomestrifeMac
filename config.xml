@@ -1,0 +1,7 @@
+<Configuration>
+    <General fullscreen="true"/>
+    <PlayerOne up="w" down="s" left="a" right="d" light="h" heavy="n" jump="j" block="k" menuConfirm="h" menuBack="j" pause="rshift"/>
+    <PlayerTwo up="up" down="down" left="left" right="right" light="numpad_4" heavy="numpad_1" jump="numpad_5" block="numpad_6" menuConfirm="numpad_4" menuBack="numpad_5" pause="numpad_plus"/>
+    <PlayerThree/>
+    <PlayerFour/>
+</Configuration>

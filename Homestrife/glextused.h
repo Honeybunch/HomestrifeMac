@@ -4,8 +4,8 @@
 #define __GLEXTUSED_H_
 
 #define NO_SDL_GLEXT
-#include <SDL/SDL.h>
-#include <SDL/SDL_opengl.h>
+#include <SDL2/SDL.h>
+#include <SDl2/SDL_opengl.h>
 
 extern GLenum shader_vert;
 extern GLenum shader_fragNonIndexed;

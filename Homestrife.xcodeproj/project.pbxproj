@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F56892C17F482B000790FCF /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F56892B17F482B000790FCF /* SDL2.framework */; };
+		3F56892E17F4853100790FCF /* SDL2.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3F56892D17F4853100790FCF /* SDL2.framework */; };
 		3FBAE44F17E8DA9B00BED50B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBAE44E17E8DA9B00BED50B /* Cocoa.framework */; };
 		3FBAE48617E8DB3D00BED50B /* audio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE46B17E8DB3D00BED50B /* audio.cpp */; };
 		3FBAE48717E8DB3D00BED50B /* fighter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE46D17E8DB3D00BED50B /* fighter.cpp */; };
@@ -21,7 +23,6 @@
 		3FBAE49017E8DB3D00BED50B /* terrainobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE48017E8DB3D00BED50B /* terrainobject.cpp */; };
 		3FBAE49117E8DB3D00BED50B /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE48217E8DB3D00BED50B /* texture.cpp */; };
 		3FBAE49217E8DB3D00BED50B /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE48417E8DB3D00BED50B /* tinyxml2.cpp */; };
-		3FBAE49417E8DB5400BED50B /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBAE49317E8DB5400BED50B /* SDL.framework */; };
 		3FBAE49617E8DB6600BED50B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBAE49517E8DB6600BED50B /* OpenGL.framework */; };
 		3FBAE49D17E8DC0300BED50B /* hslog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE49717E8DC0300BED50B /* hslog.cpp */; };
 		3FBAE49E17E8DC0300BED50B /* hsobject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE49917E8DC0300BED50B /* hsobject.cpp */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F56892B17F482B000790FCF /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		3F56892D17F4853100790FCF /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
 		3FBAE44B17E8DA9B00BED50B /* Homestrife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homestrife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBAE44E17E8DA9B00BED50B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3FBAE45117E8DA9B00BED50B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -65,7 +68,6 @@
 		3FBAE48317E8DB3D00BED50B /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
 		3FBAE48417E8DB3D00BED50B /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
 		3FBAE48517E8DB3D00BED50B /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml2.h; sourceTree = "<group>"; };
-		3FBAE49317E8DB5400BED50B /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL.framework; sourceTree = "<group>"; };
 		3FBAE49517E8DB6600BED50B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		3FBAE49717E8DC0300BED50B /* hslog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hslog.cpp; sourceTree = "<group>"; };
 		3FBAE49817E8DC0300BED50B /* hslog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hslog.h; sourceTree = "<group>"; };
@@ -85,8 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F56892C17F482B000790FCF /* SDL2.framework in Frameworks */,
 				3FBAE49617E8DB6600BED50B /* OpenGL.framework in Frameworks */,
-				3FBAE49417E8DB5400BED50B /* SDL.framework in Frameworks */,
 				3FBAE44F17E8DA9B00BED50B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,8 +99,9 @@
 		3FBAE44217E8DA9B00BED50B = {
 			isa = PBXGroup;
 			children = (
+				3F56892D17F4853100790FCF /* SDL2.framework */,
+				3F56892B17F482B000790FCF /* SDL2.framework */,
 				3FBAE49517E8DB6600BED50B /* OpenGL.framework */,
-				3FBAE49317E8DB5400BED50B /* SDL.framework */,
 				3FBAE45417E8DA9B00BED50B /* Homestrife */,
 				3FBAE44D17E8DA9B00BED50B /* Frameworks */,
 				3FBAE44C17E8DA9B00BED50B /* Products */,
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F56892E17F4853100790FCF /* SDL2.framework in Resources */,
 				3FBAE4A917E8DE3200BED50B /* Credits.rtf in Resources */,
 				3FBAE4AA17E8DE3200BED50B /* InfoPlist.strings in Resources */,
 				3FBAE4AB17E8DE3200BED50B /* MainMenu.xib in Resources */,
@@ -375,6 +379,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Homestrife/Homestrife-Prefix.pch";
 				INFOPLIST_FILE = "Homestrife/Homestrife-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,7 +394,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Homestrife/Homestrife-Prefix.pch";
 				INFOPLIST_FILE = "Homestrife/Homestrife-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = /Users/student/Desktop/build;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
